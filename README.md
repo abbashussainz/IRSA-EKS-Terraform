@@ -3,6 +3,8 @@ This project demonstrates how to configure EKS, OpenID Connect (OIDC) provider, 
 
 This project uses EKS 1.14, Terraform 0.12.12, and Terraform AWS provider 2.28.1.
 
+![alt text](IRSA-Diagram.jpg)
+
 # Advantages
 The IAM roles for service accounts feature provides the following benefits:
 
