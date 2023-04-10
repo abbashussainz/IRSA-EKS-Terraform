@@ -23,3 +23,18 @@ Amazon EKS now hosts a public OIDC discovery endpoint per cluster containing the
 
 ## Implementation and Configuration
 The project creates an EKS cluster and an OIDC provider using Terraform. The aws_eks_cluster resource configures the EKS cluster, and the aws_iam_openid_connect_provider resource creates the OIDC provider.
+
+## Getting Started
+Follow these steps to get started with this Terraform project:
+
+1. Clone the repository
+2. Navigate to the project directory
+3. Run `terraform init` to initialize the project
+4. Run `terraform apply` to create the resources in AWS
+5. Wait for the terraform apply command to finish executing
+6. Run aws eks update-kubeconfig --name <eks-cluster-name> to update your kubectl configuration to use the newly created EKS cluster
+7. Run kubectl get nodes to verify that the EKS cluster is ready
+8. Run kubectl logs -l app=irsa-demo to view the job's logs
+
+## Clean Up
+To destroy the resources created by this Terraform project, run `terraform destroy`. This will remove the VPC, subnets, security groups, EC2 bast , EKS cluster
